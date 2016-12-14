@@ -4,9 +4,9 @@
 //!
 
 
-#[cfg(all(any(target_os="linux",target_os="macos"), target_pointer_width = "64"))]
+#[cfg(all(any(target_os="linux",target_os="macos",target_os="freebsd"), target_pointer_width = "64"))]
 pub mod unix64;
-#[cfg(all(any(target_os="linux",target_os="macos"), target_pointer_width = "64"))]
+#[cfg(all(any(target_os="linux",target_os="macos",target_os="freebsd"), target_pointer_width = "64"))]
 pub use self::unix64::*;
 
 #[cfg(all(target_os="linux", target_pointer_width = "32"))]
